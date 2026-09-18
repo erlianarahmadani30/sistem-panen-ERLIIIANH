@@ -1,0 +1,43 @@
+def hitung_total_panen(jumlah_panen, harga_per_kg):
+    total = jumlah_panen * harga_per_kg
+    return total
+
+
+nama_petani = input("Masukkan nama petani: ")
+jumlah_panen = float(input("Masukkan jumlah panen (kg): "))
+harga_per_kg = float(input("Masukkan harga per kg: "))
+
+total = hitung_total_panen(jumlah_panen, harga_per_kg)
+
+print("\n===== HASIL PANEN =====")
+print("Nama petani :", nama_petani)
+print("Jumlah panen:", jumlah_panen, "kg")
+print("Harga per kg: Rp", harga_per_kg)
+print("Total hasil : Rp", total)
+
+def hitung_total_panen(jumlah_panen, harga_per_kg):
+    total = jumlah_panen * harga_per_kg
+    return total
+
+
+def hitung_diskon(total, persentase_diskon):
+    diskon = total * persentase_diskon / 100
+    total_setelah_diskon = total - diskon
+    return total_setelah_diskon
+
+
+nama_petani = input("Masukkan nama petani: ")
+jumlah_panen = float(input("Masukkan jumlah panen (kg): "))
+harga_per_kg = float(input("Masukkan harga per kg: "))
+persentase_diskon = float(input("Masukkan diskon (%): "))
+
+total = hitung_total_panen(jumlah_panen, harga_per_kg)
+total_akhir = hitung_diskon(total, persentase_diskon)
+
+print("\n===== HASIL PANEN =====")
+print("Nama petani          :", nama_petani)
+print("Jumlah panen         :", jumlah_panen, "kg")
+print("Harga per kg         : Rp", harga_per_kg)
+print("Total sebelum diskon : Rp", total)
+print("Diskon               :", persentase_diskon, "%")
+print("Total setelah diskon  : Rp", total_akhir)
